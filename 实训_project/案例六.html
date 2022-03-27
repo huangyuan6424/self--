@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .error {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        //   校验用户名
+        function checkName(userName) {
+            var reg = /^[A-Za-z][A-Za-z1-9_-]+$/;
+            if (reg.test(userName.value)) {
+                var sp = userName.parentNode.parentNode.getElementsByTagName('span')[0];
+                sp.innerHTML = '';
+            } else {
+                var sp = userName.parentNode.parentNode.getElementsByTagName('span')[0];
+
+                sp.innerHTML = '用户名错误';
+            }
+        }
+        // 验证密码
+        function checkPass(passWord) {
+            var reg = /^\d{3}$/;
+            if (reg.test(passWord.value)) {
+                var sp = passWord.parentNode.parentNode.getElementsByTagName('span')[0];
+                sp.innerHTML = '';
+            } else {
+                //显示提示文字
+                var sp = passWord.parentNode.parentNode.getElementsByTagName('span')[0];
+                sp.innerHTML = '输入3位数字';
+            }
+        }
+        // 验证邮箱
+        function checkEmail(email) {
+            var reg = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+            if (reg.test(email.value)) {
+                //验证成功
+                var sp = email.parentNode.parentNode.getElementsByTagName('span')[0];
+                sp.innerHTML = '';
+            } else {
+                //显示提示文字
+                var sp = email.parentNode.parentNode.getElementsByTagName('span')[0];
+                sp.innerHTML = '邮箱格式错误';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="success.html">
+        <table>
+            <h1>用户注册</h1>
+            <hr />
+            <tr>
+                <td>用户名</td>
+                <td><input type="text" onblur="checkName(this)" name="useName" placeholder="请输入用户名"></td>
+                <td><span class="error"></span></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" name="passWord" onblur="checkPass(this)" placeholder="请输入密码"></td>
+                <td><span class="error"></span></td>
+            </tr>
+            <tr>
+                <td>邮箱</td>
+                <td><input type="email" name="email" onblur="checkEmail(this)" placeholder="请输入邮箱地址"></td>
+                <td><span class="error"></span></td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="提交" onclick="check"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

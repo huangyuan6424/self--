@@ -1,0 +1,67 @@
+*{
+margin: 0;
+padding: 0;
+}
+img{
+    padding-left: 120px;
+}
+.out{
+    padding-top: 162px;
+    width: 1519px;
+    height: 559px;
+    background-image: url(./img/下载.jfif);
+    background-size: cover;
+  
+}
+
+span{
+    font-size: 74px;
+    font-style: oblique;
+    color: skyblue;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 30px;
+    margin-left: 85px;
+}
+.wz{
+    font-size: 20px;
+    color: white;
+   
+}
+input{
+    height: 40px;
+    width: 268px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 3px solid skyblue;
+   
+    margin-left: 20px;
+}
+input::-webkit-input-placeholder {
+   
+    color: #aab2bd;
+ 
+    font-size: 16px;
+}
+button{
+    width: 272px;
+    height: 45px;
+    margin-left: 127px;
+    background: skyblue;
+    color: white;
+    border: 1px solid skyblue;
+    font-size: 21px;
+    margin-top: 30px;
+    border-radius: 6px;
+    border: 3px solid skyblue;
+    font-size: 25px;
+}
+
+#fm1{
+    margin: 0 auto;
+    margin-left: 588px;
+}
+label.error {
+    color: red;
+    margin-left: 10px;
+}
